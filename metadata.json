@@ -1,0 +1,6 @@
+{
+  "name": "Fame Estate",
+  "description": "A premium, ultra-minimalist dark-mode real estate agency landing page inspired by Fame Estate Dubai.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
