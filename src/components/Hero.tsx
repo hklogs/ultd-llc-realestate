@@ -38,6 +38,7 @@ export default function HeroSection({ onChangePage }: HeroProps) {
   const sectionRef = useRef<HTMLElement | null>(null);
   const containerRef = useRef<HTMLDivElement | null>(null);
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
+  const callBtnRef = useRef<HTMLAnchorElement | null>(null);
   const imagesRef = useRef<HTMLImageElement[]>([]);
 
   const [activeMilestoneIndex, setActiveMilestoneIndex] = useState<number>(0);
@@ -123,6 +124,19 @@ export default function HeroSection({ onChangePage }: HeroProps) {
 
     // Draw frame image in 100% crisp original video quality
     ctx.drawImage(img, offsetX, offsetY, drawWidth, drawHeight);
+
+    // Anchor the call button onto the frame watermark spot (bottom-right of the source video)
+    const btn = callBtnRef.current;
+    if (btn) {
+      const bw = btn.offsetWidth || 180;
+      const bh = btn.offsetHeight || 45;
+      const margin = 16;
+      let cx = offsetX + imgWidth * 0.903 * (drawWidth / imgWidth);
+      const cy = offsetY + imgHeight * 0.8385 * (drawHeight / imgHeight);
+      cx = Math.min(Math.max(cx, margin + bw / 2), width - margin - bw / 2);
+      btn.style.left = `${cx}px`;
+      btn.style.top = `${cy}px`;
+    }
   };
 
   // GSAP ScrollTrigger freeze/pin engine scrubbing through converted hero clips (frames 1-150)
@@ -241,7 +255,9 @@ export default function HeroSection({ onChangePage }: HeroProps) {
         {/* Desktop Call Button — covers the frame watermark spot (bottom-right) */}
         <a
           href="tel:5125607284"
-          className="hidden md:flex absolute bottom-[14%] right-[2.5%] z-30 items-center space-x-2 bg-[#101114]/90 backdrop-blur-md border border-[#C5A059]/50 text-[#C5A059] hover:bg-[#C5A059] hover:text-[#070709] font-mono text-[10px] font-bold tracking-widest uppercase px-5 py-3 transition-all duration-300 shadow-2xl active:scale-95 rounded-[2px]"
+          ref={callBtnRef}
+          style={{ left: '95%', top: '86%' }}
+          className="hidden md:flex absolute -translate-x-1/2 -translate-y-1/2 z-30 items-center space-x-2 whitespace-nowrap bg-[#101114]/90 backdrop-blur-md border border-[#C5A059]/50 text-[#C5A059] hover:bg-[#C5A059] hover:text-[#070709] font-mono text-[10px] font-bold tracking-widest uppercase px-5 py-3 transition-colors duration-300 shadow-2xl active:scale-95 rounded-[2px]"
           id="hero-call-btn"
         >
           <Phone size={13} />
