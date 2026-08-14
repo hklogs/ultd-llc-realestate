@@ -224,7 +224,7 @@ export default function PropertiesHub({ onContactSeller }: PropertiesHubProps) {
         {/* Pinned Viewport Stage Container */}
         <div 
           ref={stageRef}
-          className="w-full md:h-screen flex flex-col justify-start md:justify-between gap-6 md:gap-0 pt-20 sm:pt-24 md:pt-16 pb-8 px-4 sm:px-8 md:px-16 relative z-10 bg-transparent"
+          className="w-full md:h-screen flex flex-col justify-start md:justify-between gap-6 md:gap-0 pt-20 sm:pt-24 md:pt-16 pb-8 px-4 sm:px-8 md:pl-40 md:pr-16 relative z-10 bg-transparent"
         >
           {/* Header & Filter Controller Bar */}
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 border-b border-white/10 pb-4 z-10">

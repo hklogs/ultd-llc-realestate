@@ -75,7 +75,7 @@ export default function Analytics() {
   ];
 
   return (
-    <section className="bg-[#08080A] text-[#F4F4F6] border-y border-white/10 relative z-10 w-full overflow-hidden">
+    <section className="bg-[#08080A] text-[#F4F4F6] border-y border-white/10 relative z-10 w-full overflow-hidden md:pl-28">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row min-h-[450px] md:h-[500px] divide-y md:divide-y-0 md:divide-x divide-white/10">
         
         {columns.map((col, index) => {

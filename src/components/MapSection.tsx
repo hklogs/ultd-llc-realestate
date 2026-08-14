@@ -249,7 +249,7 @@ export default function MapSection() {
   return (
     <section 
       id="location" 
-      className="relative w-full min-h-screen bg-[#101114] text-[#F4F4F6] overflow-hidden flex flex-col lg:flex-row border-y border-white/10 select-none"
+      className="relative w-full min-h-screen bg-[#101114] text-[#F4F4F6] overflow-hidden flex flex-col lg:flex-row border-y border-white/10 select-none lg:pl-28"
     >
       {/* Interactive Map Container */}
       <div 

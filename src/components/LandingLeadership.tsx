@@ -8,7 +8,7 @@ interface LandingLeadershipProps {
 
 export default function LandingLeadership({ onChangePage }: LandingLeadershipProps) {
   return (
-    <section className="bg-[#070709] text-[#F4F4F6] py-20 px-6 sm:px-12 border-t border-white/10 relative z-10" id="legacy">
+    <section className="bg-[#070709] text-[#F4F4F6] py-20 px-6 sm:px-12 md:pl-36 border-t border-white/10 relative z-10" id="legacy">
       <div className="max-w-7xl mx-auto space-y-12">
         
         {/* Section Heading & Dedicated Link */}

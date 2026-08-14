@@ -121,7 +121,7 @@ export default function ContactSection({ onChangePage }: ContactSectionProps) {
   return (
     <section 
       id="contact-section"
-      className="relative bg-[#08080A] text-[#F4F4F6] overflow-hidden select-none"
+      className="relative bg-[#08080A] text-[#F4F4F6] overflow-hidden select-none md:pl-28"
     >
       {/* Subtle Ambient Background Radial Gradient in Warm Champagne Gold */}
       <div 

@@ -11,7 +11,7 @@ export default function Narrative({ onChangePage }: NarrativeProps) {
   return (
     <section 
       id="narrative-section"
-      className="py-24 bg-[#070709] relative z-10 w-full overflow-hidden px-6 sm:px-12 border-t border-white/10 text-[#F4F4F6]"
+      className="py-24 bg-[#070709] relative z-10 w-full overflow-hidden px-6 sm:px-12 md:pl-36 border-t border-white/10 text-[#F4F4F6]"
     >
       <div className="max-w-7xl mx-auto">
         

@@ -35,7 +35,7 @@ export default function ServicesView({ onChangePage }: ServicesViewProps) {
 
   return (
     <section 
-      className="bg-[#101114] text-[#F4F4F6] relative z-10 w-full h-auto py-16 sm:py-20 px-6 overflow-visible border-t border-b border-white/10 mb-0" 
+      className="bg-[#101114] text-[#F4F4F6] relative z-10 w-full h-auto py-16 sm:py-20 px-6 md:pl-36 overflow-visible border-t border-b border-white/10 mb-0" 
       id="services"
     >
       <div className="max-w-6xl mx-auto space-y-12">
