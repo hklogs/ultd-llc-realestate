@@ -1,49 +1,41 @@
-export interface PropertyListing {
+export type PropertyType = 'Single Family' | 'Estate' | 'Waterfront' | 'Farm & Ranch' | 'Modern';
+export type PropertyStatus = 'Active' | 'Pending';
+
+export interface Property {
+  id: string;
+  type: PropertyType;
+  status: PropertyStatus;
+  price: number;
+  address: string;
+  beds: number;
+  baths: number;
+  sqft: number;
+  image: string;
+  description: string;
+}
+
+export interface Service {
   id: string;
   title: string;
-  subTitle: string;
-  location: string;
-  areaDistrict: string;
-  priceAed: number;
-  priceUsd: number;
-  type: 'Sky Penthouse' | 'Beachfront Villa' | 'Desert Estate' | 'Private Island';
-  floorLevel: string;
-  builtUpAreaSqFt: number;
-  bedrooms: number;
-  bathrooms: number;
-  heroImage: string;
-  gallery: string[];
-  tag: string;
-  status: 'Available' | 'Under Offer' | 'Off-Market Discretionary';
-  architect: string;
-  completionYear: string;
-  coordinates: string;
-  description: string;
+  shortDesc: string;
+  longDesc: string;
   features: string[];
 }
 
-export interface ManifestoPillar {
-  id: string;
+export interface ValuePillar {
   title: string;
-  subtitle: string;
+  value: string;
   description: string;
-  quote: string;
 }
 
-export interface FilterState {
-  category: string;
-  priceRange: [number, number];
-  searchQuery: string;
-  sortBy: 'price-desc' | 'price-asc' | 'area-desc';
+export interface Executive {
+  name: string;
+  role: string;
+  image: string;
+  bio: string;
+  credentials: string[];
+  specialties?: string[];
+  linkedin?: string;
 }
 
-export interface InquiryFormData {
-  fullName: string;
-  email: string;
-  phone: string;
-  preferredContact: 'WhatsApp' | 'Email' | 'Private Call';
-  propertyOfInterest?: string;
-  inquiryType: 'Acquisition' | 'Discreet Sale' | 'Portfolio Management' | 'Private Dossier';
-  budgetBand: string;
-  notes: string;
-}
+export type ActivePage = 'home' | 'about' | 'services' | 'properties' | 'contact' | 'disclosures' | 'terms' | 'privacy' | 'legacy' | 'overview';
